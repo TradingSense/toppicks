@@ -20,27 +20,18 @@ import pandas_datareader.data as web
 import ssl 
 import requests
 from urllib import request
-hotstocks =['TSLA','AMZN','BA','COST','JOBY','F','GM']
+
 col1 ,col2,col3 = st.columns(3)
 
-pd.set_option('expand_frame_repr', False)
-pd.set_option("display.max_rows", None, "display.max_columns", None)
-table = 'https://en.wikipedia.org/wiki/Nasdaq-100'
-context = ssl._create_unverified_context()
-response = request.urlopen(table, context=context)
-html = response.read()
-df = pd.read_html(html)
-
-first_table  = df[0]
-second_table = df[1]
-third_table  = df[2]
-fourth_table = df[3]
+set =['TSLA','AMZN','BA','COST','JOBY','F','GM','XOM','NVDA','AMD','AAPL','SNAP','TWTR','DVAX','BAC','MCD','GE']
 num = -1
 z=1
 while  z == 1:
     
     num = num +1
-    ticker = fourth_table['Ticker'].values[num]
+    if num == 17:
+        num = -1
+    ticker = set[num]
     
     today = date.today()
     yesterday = today - timedelta(days = 1)
