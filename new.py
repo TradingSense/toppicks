@@ -36,16 +36,9 @@ col4.metric('Backtest Accuracy ',str(100-amznacc)+'%')
 
 col1.header('TSLA')
 col1.header('AMZN')
-with col2:
-    numbers = st.empty()
-    other = st.empty()
-    x=1
-    while x ==1:
-        with numbers.container():
-            tslalive = si.get_live_price('tsla')
-            st.metric('TSLA Live Price',round(tslalive,2))
-        with other.container():
-            amznlive= si.get_live_price('amzn')
-            st.metric('AMZN Live Price',round(amznlive,2))
+
+col2.metric('TSLA Live Price',round(tslalive,2))
+   
+col2.metric('AMZN Live Price',round(amznlive,2))
 
  
