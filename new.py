@@ -9,11 +9,11 @@ st.title('Top Picks')
 col1,col2,col3,col4 = st.columns(4)
 
 
-tsla = stocker.predict.tomorrow(1,'tsla')
+tsla = stocker.predict.tomorrow('tsla')
 tslaacc = tsla[1]
 tslafor= tsla[0]
 
-amzn = stocker.predict.tomorrow(1,'amzn')
+amzn = stocker.predict.tomorrow('amzn')
 amznacc = amzn[1]
 amznfor= amzn[0]
 
