@@ -52,7 +52,7 @@ while  z == 1:
     custommfi = stock.get('mfi')[yesterday.strftime('%Y-%m-%d')].round(2)*100
     customwr = stock.get('wr')[yesterday.strftime('%Y-%m-%d')].round(2)
 
-    h = stocker.predict.tomorrow(7,ticker)[0]
+    h = stocker.predict.tomorrow(ticker)[0]
     live = si.get_live_price(ticker)
 
     day = 1
