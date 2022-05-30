@@ -29,16 +29,11 @@ amzndelt = amznfor - amznlive
 amzndelt = round(amzndelt,2)
 col3.metric('$TSLA 7 Day Forecast',tslafor,delta=tsladelt)
 col4.metric('Backtest Accuracy',str(100-tslaacc)+'%')
-
 col3.metric('$AMZN 7 Day Forecast ',amznfor,delta = amzndelt)
 col4.metric('Backtest Accuracy ',str(100-amznacc)+'%')
-
-
 col1.header('TSLA')
 col1.header('AMZN')
-
 col2.metric('TSLA Live Price',round(tslalive,2))
-   
 col2.metric('AMZN Live Price',round(amznlive,2))
 
  
