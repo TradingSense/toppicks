@@ -4,7 +4,7 @@ from yahoo_fin import stock_info as si
 hotstocks =['TSLA','AMZN','BA','COST']
 
 
-st.title('Top Picks')
+
 
 col1,col2,col3,col4 = st.columns(4)
 
